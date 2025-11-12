@@ -88,3 +88,36 @@ def binarysearchr(inputList,targetChar):
             return binarysearchr(right,targetChar)
         else:
             return binarysearchr(left,targetChar)
+
+
+#recursive approach to quicksort
+def getPivot(arr):
+    if len(arr) == 0:
+        return None
+    elif len(arr) == 1:
+        return arr[0]
+    else:
+        num1 = arr[len(arr)-1]
+        num2 = arr[len(arr)//2]
+        num3 = arr[0]
+        if (num1 <= num2 <= num3) or (num3 <= num2 <= num1):
+            return num2
+        elif (num2 <= num1 <= num3) or (num3 <= num1 <= num2):
+            return num1
+        else:
+            return num3
+
+def qsort(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot  = getPivot(arr)
+        left = []
+        right = []
+        for item in arr:
+            if item < pivot:
+                left.append(item)
+            elif item > pivot:
+                right.append(item)
+        return qsort(left) + [pivot] + qsort(right)
+
