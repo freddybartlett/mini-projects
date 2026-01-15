@@ -8,4 +8,4 @@ The code for this program is in "recursive-functions.py" in this repo. This prog
 
 ## sorting-algorithms.py
 
-The code for this program is in "sorting-algoirthms.py". This program consists of a range of different sorting algorithms
+The code for this program is in "sorting-algoirthms.py". This program consists of a range of different sorting algorithms.
